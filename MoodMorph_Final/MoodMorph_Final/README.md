@@ -1,53 +1,110 @@
-# MoodMorph
+# MoodMorph — Adaptive AI-Inspired Moodboard Generator
 
-MoodMorph is a zero-cost, browser-based creative moodboard prototype. It interprets a prompt using a transparent keyword lexicon and deterministic rules, then adapts a colour palette, typography pairing, design direction and procedural canvas artwork.
+**Turn your ideas into visual moods.**
 
-## Run it
+MoodMorph is a zero-cost, browser-based creative moodboard generator that transforms text prompts into personalised visual directions. Describe a mood, aesthetic, or idea, and MoodMorph generates a coordinated colour palette, typography pairing, design direction, and procedural artwork.
 
-1. Download and extract this folder.
-2. Open `index.html` in a modern browser (Chrome, Edge, Firefox or Safari).
-3. Enter an idea or choose one of the example prompts.
-4. Generate, then try the interface morph toggle, palette swatches, regenerate, save, PNG export and JSON export.
+What makes it different? The interface itself can morph to reflect the mood you're creating.
 
-No installation, account, API key, backend, hosting or build step is required.
+## ✨ Live Demo
 
-## What is genuinely implemented
+**[Explore MoodMorph](https://moodmorphh.netlify.app/)**
 
-- Natural-language text input with a transparent keyword-to-parameter lexicon.
-- Deterministic colour palette generation with HEX values.
-- Rule-based typography recommendations and design-direction copy.
-- Procedural canvas artwork generated locally in the browser.
-- Optional adaptive interface theme.
-- Local browser storage for saved prompts and variations (up to 20).
-- PNG moodboard export, JSON specification export, CSS variable copying.
-- Responsive layout.
+## Features
 
-## Important AI / research honesty
+- **Prompt-Based Generation:** Enter a mood, aesthetic, or creative idea to generate a moodboard.
+- **Dynamic Colour Palettes:** Generate coordinated colour combinations with HEX values.
+- **Typography Pairings:** Receive typography recommendations based on your selected mood.
+- **Procedural Artwork:** Create browser-generated canvas visuals.
+- **Adaptive Interface:** Toggle interface morphing to make the UI reflect the generated mood.
+- **Moodboard Library:** Save and revisit up to 20 generated variations locally.
+- **Export Options:** Download moodboards as PNG, export JSON specifications, and copy CSS variables.
+- **Responsive Experience:** Designed to work across modern desktop and mobile browsers.
 
-The core application does **not** call a neural language model or neural image-generation model. Prompt interpretation is a deterministic keyword/rule system; artwork is procedural canvas drawing. Unknown prompts receive a deterministic hash-based hue rather than semantic understanding. This is intentionally disclosed in the interface.
+## 🛠️ How It Works
 
-The optional external image checkbox attempts to use Pollinations over the internet. It is not required for the app, may be unavailable or rate-limited, and its availability/terms are outside this project's control. Do not describe it as a guaranteed free service. The core application works without it.
+MoodMorph uses a transparent keyword-based interpretation system to map user prompts to visual parameters.
 
-## Privacy and storage
+1. The user enters a creative prompt.
+2. A keyword lexicon identifies recognised mood and aesthetic terms.
+3. Deterministic rules generate colour, typography, and design-direction parameters.
+4. A procedural canvas engine creates corresponding artwork.
+5. The interface can optionally adapt its appearance to the generated mood.
 
-Prompts and saved boards remain in the browser's `localStorage` on that device/browser. They are not synced to an account or server. Clearing browser site data can remove saved boards. The optional external image feature sends the prompt to the external image provider when enabled.
+## Technology & Implementation
 
-## Project structure
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- HTML Canvas API
+- Browser LocalStorage
+- Pollinations (optional external image generation)
+- Google Fonts (optional typography resources)
+- Netlify (deployment)
 
-- `index.html` — complete self-contained application (CSS and JavaScript included).
-- `README.md` — setup, features and technical limitations.
+## Getting Started
 
-## Research directions
+MoodMorph requires no installation, backend, API key, or build process.
 
-Potential experiments (collect actual observations before making claims):
+**Run locally:**
 
-1. Compare the palette and typography generated for prompts with one keyword changed (e.g. `dreamy lavender` vs `dark lavender`).
-2. Test known-keyword prompts against prompts with unknown vocabulary; record when the fallback hue is used.
-3. Ask participants to rate palette coherence, typography fit and perceived match to their prompt on a consistent scale.
-4. Compare the interface with theme morphing enabled and disabled for readability and perceived fit.
+1. Clone or download this repository.
+2. Extract the project files.
+3. Open `index.html` in a modern web browser.
+4. Enter a prompt or select an example.
+5. Generate your moodboard and explore its customisation and export features.
 
-Record prompt, matched keywords, generated parameters, participant ratings, sample size and limitations. Do not claim semantic AI understanding or research findings without evidence.
+Alternatively, use the [live deployment](https://moodmorphh.netlify.app/).
+
+## AI Transparency & Technical Limitations
+
+An important aspect of MoodMorph is transparent implementation.
+
+The core application does **not** use a neural language model or neural image-generation model. Its prompt interpretation relies on a deterministic keyword lexicon and rule-based logic.
+
+- Recognised keywords influence generated visual parameters.
+- Unknown prompts use a deterministic hash-based hue fallback.
+- Artwork is produced through procedural JavaScript canvas drawing.
+- The optional Pollinations integration attempts external image generation but depends on third-party availability.
+
+This distinction is intentional: MoodMorph demonstrates prompt-driven creative interaction without misrepresenting rule-based generation as semantic AI understanding.
+
+## Privacy & Data Storage
+
+- Saved moodboards are stored locally using browser `localStorage`.
+- No user account or application backend is required.
+- Saved content is not synchronised across devices.
+- Clearing browser site data may remove saved moodboards.
+- Enabling optional external image generation sends the prompt to the external image provider.
+
+## Research & Future Exploration
+
+MoodMorph also offers opportunities to explore the relationship between text prompts and visual design.
+
+Potential experiments include:
+
+1. Evaluating how changing individual prompt keywords affects generated colour palettes.
+2. Comparing recognised-keyword prompts with unfamiliar vocabulary.
+3. Measuring perceived visual coherence and prompt-to-design relevance through user feedback.
+4. Evaluating interface readability with adaptive theming enabled and disabled.
+
+These are proposed research directions, not completed experiments or established findings.
+
+## Project Structure
+
+```text
+MoodMorph/
+├── index.html
+└── README.md
+```
+
+- `index.html` — Self-contained application containing HTML, CSS, and JavaScript.
+- `README.md` — Project documentation.
 
 ## License
 
-No third-party runtime dependency is required for the core application. The optional Google Fonts stylesheet and optional external image service require an internet connection.
+No third-party runtime dependency is required for the core application. Optional Google Fonts and external image generation require an internet connection.
+
+---
+
+**Built as a creative exploration of prompt-driven design, procedural graphics, and adaptive user interfaces.**
